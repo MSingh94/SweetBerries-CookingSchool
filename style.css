@@ -18,6 +18,20 @@
 .nav-links {
     font-family: 'Roboto';
     color: black;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.get-started {
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    height: 38px;
+    width: 90px;
+    border: 0px;
+    cursor: pointer;
 }
 
 .header{
