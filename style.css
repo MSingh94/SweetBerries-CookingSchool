@@ -7,13 +7,12 @@
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 50px 550px 780px 50px;
     grid-template-areas: 
     "header header header header"
     "intro intro intro-image intro-image"
     "cards cards cards cards"
     "footer footer footer footer";
+    row-gap: 30px;
 }
 
 .nav-bar {
@@ -55,6 +54,7 @@
     height: 40px;
     display: block;
     margin-left: -15%;
+    cursor: pointer;
 }
 
 .intro{
@@ -92,11 +92,250 @@
 }
 
 .cards {
-    background-color: yellow;
+    background-color: #F5F3EF;
     grid-area: cards;
+    display: grid;
+    grid-template-columns: repeat (3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    "card card card"
+    "card card card";
+    margin-left: 13%;
+    row-gap: 30px;
+    column-gap: 30px
+}
+
+.card {
+    background-color: white;
+    width: 400px;
+    height: 300px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding-bottom: 5%;
+}
+
+.intro-card {
+    background-color: #FEBD2F;
+}
+
+.card h2 {
+    font-family: 'Roboto Serif';
+font-style: normal;
+font-weight: 500;
+font-size: 45px;
+margin-left: 9%;
+}
+
+.card img{
+    display: block;
+    height: 24%;
+    width: 18%;
+    margin-left: 70%;
+
+     
+}
+
+.card h3 {
+    background-color:#FFFFFF;
+    font-family: 'Roboto Serif';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    margin-left: 9%;
+}
+
+.card p {
+    background-color:#FFFFFF;
+    color: #646464;
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+margin-left: 9%;
+margin-right: 9%;
+}
+
+.card button {
+    width: 120px;
+height: 30px;
+background-color: white;
+border-radius: 50px;
+border: 1px solid #DCDCDC;
+cursor: pointer;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 450;
+font-size: 13px;
+margin-left: 9%;
 }
 
 .footer {
-    background-color: chartreuse;
+    background-color: #FEBD2F;
     grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer img{
+    height: 70%;
+    width: 6%;
+    cursor: pointer;
+}
+
+@media (max-width:768px) {
+
+    .header-image {
+        width: 162px;
+        height: 40px;
+        margin-left: 5%;
+        cursor: pointer;
+    }
+
+    .nav-links {
+        font-family: 'Roboto';
+        color: black;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        text-decoration: none;
+        margin-left: 10%;
+    }
+    .cards {
+        background-color: #F5F3EF;
+        grid-area: cards;
+        display: grid;
+        grid-template-columns: repeat (1, 1fr);
+        grid-template-areas: 
+        "card"
+        "card"
+        "card";
+       row-gap: 30px;
+       column-gap: 30px;
+    }
+
+
+.card {
+    width: 350px;
+    height: 250px;
+ 
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+    "header "
+    "intro "
+    "intro-image"
+    "cards"
+    "footer";
+}
+
+.intro{
+    background-color: #F5F3EF;
+    grid-area: intro;
+    padding-right: 10%;
+    width: 95%;
+    text-align: center;
+}
+
+
+.intro-image {
+    grid-area: intro-image;
+    background-color: #F5F3EF;
+    width: 200px;
+   
+}
+
+.footer {
+    height: 50px;
+    width: auto;
+    background-color: #FEBD2F;
+    grid-area: footer;
+}
+
+.footer img{
+    height: 60%;
+    width: 15%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+}
+
+@media (max-width: 460px) {
+    .header-image {
+        width: 162px;
+        height: 40px;
+        margin-left: 5%;
+        cursor: pointer;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+
+    .cards {
+        background-color: #F5F3EF;
+        grid-area: cards;
+        display: grid;
+        grid-template-columns: repeat (2, 1fr);
+        grid-template-areas: 
+        "card card"
+        "card card"
+        "card card";
+       row-gap: 30px;
+       column-gap: 30px;
+    }
+
+
+.card {
+    width: 350px;
+    height: 250px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "intro intro"
+    "intro-image intro-image"
+    "cards cards"
+    "footer footer";
+}
+
+.intro{
+    background-color: #F5F3EF;
+    grid-area: intro;
+    padding-right: 10%;
+}
+
+.intro-image {
+    grid-area: intro-image;
+    background-color: #F5F3EF;
+   padding-left: 15%;
+}
+
+.footer {
+    height: 50px;
+    width: auto;
+    background-color: #FEBD2F;
+    grid-area: footer;
+}
+
+.footer img{
+    height: 60%;
+    width: 15%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
 }
